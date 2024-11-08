@@ -23,7 +23,7 @@ const About = () => {
         interval = setInterval(() => {
             const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             
-            const scrambled = text.split("").map((char, index) => {
+            const scrambled = text.split("").map((_, index) => {
                 if (index < iteration) {
                     return text[index];
                 }
