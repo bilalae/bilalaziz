@@ -5,11 +5,16 @@ import Project3 from "@/assets/ProjectImages/DrumMachineProject.png"
 import Project4 from "@/assets/ProjectImages/PokeapiProject.png"
 import Project5 from "@/assets/ProjectImages/QuoteProject.png"
 import { Button } from "@/components/ui/button"
-import arrowIcon from "@/assets/Icons/ArrowIcon.svg"
+import LeftArrowIcon from "@/assets/Icons/LeftArrowIcon.svg"
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
   const projects = [Project1, Project2, Project3, Project4, Project5]
+  const navigate = useNavigate()
 
+  const handleClick = () => {
+    navigate("/projects")
+  }
   return (
     <div className="card overflow-hidden ">
       <div className="flex flex-col gap-3">
@@ -38,11 +43,13 @@ const Projects = () => {
          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-card to-transparent z-10"></div>
         
        
-        <Button className="absolute bottom-2 left-1/2 transform -translate-x-1/2 font-semibold z-10 ">
+       
+        <Button className="absolute bottom-2 left-1/2 transform -translate-x-1/2 font-semibold z-10 " onClick={handleClick}>
 
           View all Projects
-        <img src={arrowIcon} className="h-4 w-4" alt="" />
+        <img src={LeftArrowIcon} className="h-4 w-4" alt="Right Arrow" />
         </Button>
+       
       </div>
     </div>
   )
