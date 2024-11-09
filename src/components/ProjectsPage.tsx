@@ -18,7 +18,8 @@ import ShadCNIcon from "@/assets/Icons/TechIcons/ShadCNIcon.svg"
 import RTLIcon from "@/assets/Icons/TechIcons/RTLIcon.svg"
 import ReduxIcon from "@/assets/Icons/TechIcons/ReduxIcon.svg"
 import ReactIcon from "@/assets/Icons/TechIcons/ReactIcon.svg"
-
+import FiltersProject from './ui/filtersProject'
+import { useState } from 'react'
 
 
 
@@ -34,7 +35,7 @@ const ProjectsPage = () => {
     const handleClick = () => {
         navigate("/")
     }
-    const projects = [
+    const [projects, setProjects] = useState([
         {
           title: "JavaScript Calculator",
           description: "A simple old fashioned plain JavaScript Calculator",
@@ -42,7 +43,7 @@ const ProjectsPage = () => {
           tags: [
             {
               name: "JavaScript",
-              class: "javascriptTag",
+              class: "JavaScriptTag",
               icon: JavaScriptIcon,
             },
           ],
@@ -56,37 +57,37 @@ const ProjectsPage = () => {
           tags: [
             {
               name: "TypeScript",
-              class: "typescriptTag",
+              class: "TypeScriptTag",
               icon: TypeSriptIcon,
             },
             {
               name: "Next",
-              class: "nextTag",
+              class: "NextTag",
               icon: NextIcon,
             },
             {
               name: "Redux",
-              class: "reduxTag",
+              class: "ReduxTag",
               icon: ReduxIcon,
             },
             {
               name: "RTL",
-              class: "rtlTag",
+              class: "RTLag",
               icon: RTLIcon,
             },
             {
               name: "Jest",
-              class: "jestTag",
+              class: "JestTag",
               icon: JestIcon,
             },
             {
               name: "Tailwind",
-              class: "tailwindTag",
+              class: "TailwindTag",
               icon: TailwindIcon,
             },
             {
               name: "ShadCN",
-              class: "shadcnTag",
+              class: "ShadCNTag",
               icon: ShadCNIcon,
             },
           ],
@@ -100,12 +101,12 @@ const ProjectsPage = () => {
           tags: [
             {
               name: "JavaScript",
-              class: "javascriptTag",
+              class: "JavascriptTag",
               icon: JavaScriptIcon,
             },
             {
               name: "Tailwind",
-              class: "tailwindTag",
+              class: "TailwindTag",
               icon: TailwindIcon,
             },
           ],
@@ -119,17 +120,17 @@ const ProjectsPage = () => {
           tags: [
             {
               name: "JavaScript",
-              class: "javascriptTag",
+              class: "JavaScriptTag",
               icon: JavaScriptIcon,
             },
             {
               name: "Redux",
-              class: "reduxTag",
+              class: "ReduxTag",
               icon: ReduxIcon,
             },
             {
               name: "Tailwind",
-              class: "tailwindTag",
+              class: "TailwindTag",
               icon: TailwindIcon,
             },
           ],
@@ -143,27 +144,27 @@ const ProjectsPage = () => {
           tags: [
             {
               name: "JavaScript",
-              class: "javascriptTag",
+              class: "JavaScriptTag",
               icon: JavaScriptIcon,
             },
             {
               name: "React",
-              class: "reactTag",
+              class: "ReactTag",
               icon: ReactIcon, 
             },
             {
               name: "Redux",
-              class: "reduxTag",
+              class: "ReduxTag",
               icon: ReduxIcon,
             },
           ],
           demo: "https://github.com/bilalae",
           source: "https://github.com/bilalae/blog-platform",
         },
-      ];
-      
+      ]);
+      const [filteredProjects, setFilteredProjects] = useState(projects)
   return (
-    <div className='projectBackground'>
+    <div className='projectBackground min-h-lvh'>
         <div className='flex flex-col justify-center items-center pt-12 gap-3 p-4'>
             <h1 className='h1 text-transparent bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl md:text-4xl lg:text-4xl '>My Projects</h1>
             <p className='descriptiveText text-sm md:text-base max-w-lg text-center '>
@@ -174,11 +175,14 @@ const ProjectsPage = () => {
                 Home</Button> 
         </div> 
 
+        <div>
+          <FiltersProject projects={projects} setProjects={setProjects} filteredProjects={filteredProjects} setFilteredProjects={setFilteredProjects} />
+        </div>
         <div className='flex flex-wrap gap-4 items-stretch  px-7  justify-center mt-10'>
             
 
             
-            {projects.map((project: any) => {
+            {filteredProjects.map((project: any) => {
                 
                 
                 return <ProjectCard title={project.title} key ={project.title} description={project.description} image={project.image} tags={project.tags} demo={project.demo} source={project.source}/>

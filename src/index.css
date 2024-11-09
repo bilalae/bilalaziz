@@ -75,39 +75,39 @@
     @apply text-slate-400 text-[1rem]
   }
 
-  .javascriptTag{
+  .JavaScriptTag{
     @apply bg-yellow-500  text-yellow-500
   }
 
-  .typescriptTag{
+  .TypeScriptTag{
     @apply bg-blue-500 text-white
   }
 
-  .nextTag {
+  .NextTag {
     @apply bg-opacity-100 bg-white
   }
 
-  .reduxTag {
+  .ReduxTag {
     @apply bg-purple-400 text-purple-300
   }
   
-  .rtlTag {
+  .RTLTag {
     @apply bg-red-500 text-red-300
   }
 
-  .jestTag {
+  .JestTag {
     @apply bg-red-500 text-white
   }
 
-  .tailwindTag {
+  .TailwindTag {
     @apply bg-blue-600 text-blue-400
   }
 
-  .shadcnTag {
+  .ShadCNTag {
     @apply bg-white
   }
 
-  .reactTag {
+  .ReactTag {
     @apply bg-blue-500 
   }
   .projectBackground {

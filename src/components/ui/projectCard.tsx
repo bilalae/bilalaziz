@@ -35,13 +35,13 @@ const ProjectCard = ({title, description, image, tags, demo, source}: any) => {
 </CardHeader>
 <CardContent className='w-fit flex flex-wrap gap-1 h-full '>
     {tags.map((tag: any) => {
-         return <div key={tag.class}className= {` flex justify-center items-center gap-[0.3rem] rounded-xl h-fit px-3 text-xs font-semibold bg-opacity-10 hover:bg-opacity-5 ${tag.class}`}>
+         return <div key={tag.class}className= {` flex justify-center items-center gap-[0.3rem] rounded-xl h-fit px-3 text-xs font-semibold bg-opacity-10 hover:bg-opacity-5 transition-all duration-100   ${tag.class}`}>
             <img src={tag.icon} alt={tag.name} className="w-5 h-5 my-[1px]" />
             {tag.name}
             </div>
     })}
 </CardContent>
-<CardFooter className='bg-slate-950 border-t-2 border-border p-4  flex justify-center '>
+<CardFooter className='bg-slate-950 border-t-2 border-border p-4  flex justify-center gap-2 '>
     <Button disabled={demo ? false : true} className='w-full font-semibold md:w-[40%]' onClick={handleDemo}>
         Live Demo
     </Button>
