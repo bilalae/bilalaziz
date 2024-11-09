@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { Button } from "./button"
 
 
-const FiltersProject = ({projects, setProjects, filteredProjects, setFilteredProjects}: any) => {
+
+const FiltersProject = ({projects, setFilteredProjects}: any) => {
     const technologies = ["JavaScript", "React", "Next", "Redux", "RTL", "Jest", "Tailwind", "ShadCN"]
     const [filters, setFilters] = useState({
         featured: false,
