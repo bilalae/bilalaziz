@@ -12,7 +12,7 @@ const Services = () => {
         Services
         </div>
         </div>
-        <div className="text-[1rem] text-slate-400">
+        <div className="descriptiveText">
         Customized solutions that adapt to your priorities and budget
         </div>
 

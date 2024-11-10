@@ -35,133 +35,142 @@ const ProjectsPage = () => {
     const handleClick = () => {
         navigate("/")
     }
-    const [projects, setProjects] = useState([
-        {
-          title: "JavaScript Calculator",
-          description: "A simple old fashioned plain JavaScript Calculator",
-          image: Project1,
-          tags: [
-            {
-              name: "JavaScript",
-              class: "JavaScriptTag",
-              icon: JavaScriptIcon,
-            },
-          ],
-          demo: "https://github.com/bilalae",
-          source: "",
-        },
-        {
-          title: "NextAuth",
-          description: "An Application built on NextAUTH",
-          image: Project2,
-          tags: [
-            {
-              name: "TypeScript",
-              class: "TypeScriptTag",
-              icon: TypeSriptIcon,
-            },
-            {
-              name: "Next",
-              class: "NextTag",
-              icon: NextIcon,
-            },
-            {
-              name: "Redux",
-              class: "ReduxTag",
-              icon: ReduxIcon,
-            },
-            {
-              name: "RTL",
-              class: "RTLag",
-              icon: RTLIcon,
-            },
-            {
-              name: "Jest",
-              class: "JestTag",
-              icon: JestIcon,
-            },
-            {
-              name: "Tailwind",
-              class: "TailwindTag",
-              icon: TailwindIcon,
-            },
-            {
-              name: "ShadCN",
-              class: "ShadCNTag",
-              icon: ShadCNIcon,
-            },
-          ],
-          demo: "https://github.com/bilalae",
-          source: "",
-        },
-        {
-          title: "Personal Portfolio",
-          description: "A personal portfolio website showcasing my work and skills",
-          image: Project3,
-          tags: [
-            {
-              name: "JavaScript",
-              class: "JavascriptTag",
-              icon: JavaScriptIcon,
-            },
-            {
-              name: "Tailwind",
-              class: "TailwindTag",
-              icon: TailwindIcon,
-            },
-          ],
-          demo: "https://github.com/bilalae",
-          source: "https://github.com/bilalae/portfolio",
-        },
-        {
-          title: "E-Commerce Site",
-          description: "An e-commerce website with a full shopping cart and checkout system",
-          image: Project4,
-          tags: [
-            {
-              name: "JavaScript",
-              class: "JavaScriptTag",
-              icon: JavaScriptIcon,
-            },
-            {
-              name: "Redux",
-              class: "ReduxTag",
-              icon: ReduxIcon,
-            },
-            {
-              name: "Tailwind",
-              class: "TailwindTag",
-              icon: TailwindIcon,
-            },
-          ],
-          demo: "https://github.com/bilalae",
-          source: "https://github.com/bilalae/ecommerce-site",
-        },
-        {
-          title: "Blog Platform",
-          description: "A full-stack blog platform with user authentication and CRUD functionality",
-          image: Project5,
-          tags: [
-            {
-              name: "JavaScript",
-              class: "JavaScriptTag",
-              icon: JavaScriptIcon,
-            },
-            {
-              name: "React",
-              class: "ReactTag",
-              icon: ReactIcon, 
-            },
-            {
-              name: "Redux",
-              class: "ReduxTag",
-              icon: ReduxIcon,
-            },
-          ],
-          demo: "https://github.com/bilalae",
-          source: "https://github.com/bilalae/blog-platform",
-        },
-      ]);
+
+
+const [projects, setProjects] = useState([
+  {
+    title: "JavaScript Calculator",
+    description: "A simple old fashioned plain JavaScript Calculator",
+    image: Project1,
+    tags: [
+      {
+        name: "JavaScript",
+        class: "JavaScriptTag",
+        icon: JavaScriptIcon,
+      },
+    ],
+    hasDemo: true,
+    hasSource: false,
+    featured: true,
+  },
+  {
+    title: "NextAuth",
+    description: "An Application built on NextAUTH",
+    image: Project2,
+    tags: [
+      {
+        name: "TypeScript",
+        class: "TypeScriptTag",
+        icon: TypeSriptIcon,
+      },
+      {
+        name: "Next",
+        class: "NextTag",
+        icon: NextIcon,
+      },
+      {
+        name: "Redux",
+        class: "ReduxTag",
+        icon: ReduxIcon,
+      },
+      {
+        name: "RTL",
+        class: "RTLag",
+        icon: RTLIcon,
+      },
+      {
+        name: "Jest",
+        class: "JestTag",
+        icon: JestIcon,
+      },
+      {
+        name: "Tailwind",
+        class: "TailwindTag",
+        icon: TailwindIcon,
+      },
+      {
+        name: "ShadCN",
+        class: "ShadCNTag",
+        icon: ShadCNIcon,
+      },
+    ],
+    hasDemo: true,
+    hasSource: false,
+    featured: false,
+  },
+  {
+    title: "Personal Portfolio",
+    description: "A personal portfolio website showcasing my work and skills",
+    image: Project3,
+    tags: [
+      {
+        name: "JavaScript",
+        class: "JavascriptTag",
+        icon: JavaScriptIcon,
+      },
+      {
+        name: "Tailwind",
+        class: "TailwindTag",
+        icon: TailwindIcon,
+      },
+    ],
+    hasDemo: true,
+    hasSource: true,
+    featured: true,
+  },
+  {
+    title: "E-Commerce Site",
+    description: "An e-commerce website with a full shopping cart and checkout system",
+    image: Project4,
+    tags: [
+      {
+        name: "JavaScript",
+        class: "JavaScriptTag",
+        icon: JavaScriptIcon,
+      },
+      {
+        name: "Redux",
+        class: "ReduxTag",
+        icon: ReduxIcon,
+      },
+      {
+        name: "Tailwind",
+        class: "TailwindTag",
+        icon: TailwindIcon,
+      },
+    ],
+    hasDemo: true,
+    hasSource: true,
+    featured: false,
+  },
+  {
+    title: "Blog Platform",
+    description: "A full-stack blog platform with user authentication and CRUD functionality",
+    image: Project5,
+    tags: [
+      {
+        name: "JavaScript",
+        class: "JavaScriptTag",
+        icon: JavaScriptIcon,
+      },
+      {
+        name: "React",
+        class: "ReactTag",
+        icon: ReactIcon,
+      },
+      {
+        name: "Redux",
+        class: "ReduxTag",
+        icon: ReduxIcon,
+      },
+    ],
+    hasDemo: true,
+    hasSource: true,
+    featured: true,
+  },
+]);
+
+
       const [filteredProjects, setFilteredProjects] = useState(projects)
   return (
     <div className='projectBackground min-h-lvh'>
@@ -185,7 +194,7 @@ const ProjectsPage = () => {
             {filteredProjects.map((project: any) => {
                 
                 
-                return <ProjectCard title={project.title} key ={project.title} description={project.description} image={project.image} tags={project.tags} demo={project.demo} source={project.source}/>
+                return <ProjectCard title={project.title} key ={project.title} description={project.description} image={project.image} tags={project.tags} demo={project.hasDemo} source={project.hasSource}/>
                     
             })}
             
