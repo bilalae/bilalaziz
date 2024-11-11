@@ -37,143 +37,159 @@ const ProjectsPage = () => {
     }
 
 
-const [projects, setProjects] = useState([
-  {
-    title: "JavaScript Calculator",
-    description: "A simple old fashioned plain JavaScript Calculator",
-    image: Project1,
-    tags: [
+    const [projects, setProjects] = useState([
       {
-        name: "JavaScript",
-        class: "JavaScriptTag",
-        icon: JavaScriptIcon,
-      },
-    ],
-    hasDemo: true,
-    hasSource: false,
-    featured: true,
-  },
-  {
-    title: "NextAuth",
-    description: "An Application built on NextAUTH",
-    image: Project2,
-    tags: [
-      {
-        name: "TypeScript",
-        class: "TypeScriptTag",
-        icon: TypeSriptIcon,
+        title: "JavaScript Calculator",
+        description: "A simple old fashioned plain JavaScript Calculator",
+        image: Project1,
+        tags: [
+          {
+            name: "JavaScript",
+            class: "JavaScriptTag",
+            icon: JavaScriptIcon,
+          },
+        ],
+        hasDemo: true,
+        hasSource: false,
+        featured: true,
+        demoLink: "",
+        sourceLink: "",
+        createdAt: "2023-03-15T08:00:00Z", // Example date
       },
       {
-        name: "Next",
-        class: "NextTag",
-        icon: NextIcon,
+        title: "NextAuth",
+        description: "An Application built on NextAUTH",
+        image: Project2,
+        tags: [
+          {
+            name: "TypeScript",
+            class: "TypeScriptTag",
+            icon: TypeSriptIcon,
+          },
+          {
+            name: "Next",
+            class: "NextTag",
+            icon: NextIcon,
+          },
+          {
+            name: "Redux",
+            class: "ReduxTag",
+            icon: ReduxIcon,
+          },
+          {
+            name: "RTL",
+            class: "RTLag",
+            icon: RTLIcon,
+          },
+          {
+            name: "Jest",
+            class: "JestTag",
+            icon: JestIcon,
+          },
+          {
+            name: "Tailwind",
+            class: "TailwindTag",
+            icon: TailwindIcon,
+          },
+          {
+            name: "ShadCN",
+            class: "ShadCNTag",
+            icon: ShadCNIcon,
+          },
+        ],
+        hasDemo: true,
+        hasSource: false,
+        featured: false,
+        demoLink: "",
+        sourceLink: "",
+        createdAt: "2023-06-05T10:00:00Z", // Example date
       },
       {
-        name: "Redux",
-        class: "ReduxTag",
-        icon: ReduxIcon,
+        title: "Personal Portfolio",
+        description: "A personal portfolio website showcasing my work and skills",
+        image: Project3,
+        tags: [
+          {
+            name: "JavaScript",
+            class: "JavascriptTag",
+            icon: JavaScriptIcon,
+          },
+          {
+            name: "Tailwind",
+            class: "TailwindTag",
+            icon: TailwindIcon,
+          },
+        ],
+        hasDemo: true,
+        hasSource: true,
+        featured: true,
+        demoLink: "",
+        sourceLink: "",
+        createdAt: "2023-02-20T09:30:00Z", // Example date
       },
       {
-        name: "RTL",
-        class: "RTLag",
-        icon: RTLIcon,
+        title: "E-Commerce Site",
+        description: "An e-commerce website with a full shopping cart and checkout system",
+        image: Project4,
+        tags: [
+          {
+            name: "JavaScript",
+            class: "JavaScriptTag",
+            icon: JavaScriptIcon,
+          },
+          {
+            name: "Redux",
+            class: "ReduxTag",
+            icon: ReduxIcon,
+          },
+          {
+            name: "Tailwind",
+            class: "TailwindTag",
+            icon: TailwindIcon,
+          },
+        ],
+        hasDemo: true,
+        hasSource: true,
+        featured: false,
+        demoLink: "",
+        sourceLink: "",
+        createdAt: "2023-08-10T14:15:00Z", // Example date
       },
       {
-        name: "Jest",
-        class: "JestTag",
-        icon: JestIcon,
+        title: "Blog Platform",
+        description: "A full-stack blog platform with user authentication and CRUD functionality",
+        image: Project5,
+        tags: [
+          {
+            name: "JavaScript",
+            class: "JavaScriptTag",
+            icon: JavaScriptIcon,
+          },
+          {
+            name: "React",
+            class: "ReactTag",
+            icon: ReactIcon,
+          },
+          {
+            name: "Redux",
+            class: "ReduxTag",
+            icon: ReduxIcon,
+          },
+        ],
+        hasDemo: true,
+        hasSource: true,
+        featured: true,
+        demoLink: "",
+        sourceLink: "",
+        createdAt: "2023-07-25T12:45:00Z", // Example date
       },
-      {
-        name: "Tailwind",
-        class: "TailwindTag",
-        icon: TailwindIcon,
-      },
-      {
-        name: "ShadCN",
-        class: "ShadCNTag",
-        icon: ShadCNIcon,
-      },
-    ],
-    hasDemo: true,
-    hasSource: false,
-    featured: false,
-  },
-  {
-    title: "Personal Portfolio",
-    description: "A personal portfolio website showcasing my work and skills",
-    image: Project3,
-    tags: [
-      {
-        name: "JavaScript",
-        class: "JavascriptTag",
-        icon: JavaScriptIcon,
-      },
-      {
-        name: "Tailwind",
-        class: "TailwindTag",
-        icon: TailwindIcon,
-      },
-    ],
-    hasDemo: true,
-    hasSource: true,
-    featured: true,
-  },
-  {
-    title: "E-Commerce Site",
-    description: "An e-commerce website with a full shopping cart and checkout system",
-    image: Project4,
-    tags: [
-      {
-        name: "JavaScript",
-        class: "JavaScriptTag",
-        icon: JavaScriptIcon,
-      },
-      {
-        name: "Redux",
-        class: "ReduxTag",
-        icon: ReduxIcon,
-      },
-      {
-        name: "Tailwind",
-        class: "TailwindTag",
-        icon: TailwindIcon,
-      },
-    ],
-    hasDemo: true,
-    hasSource: true,
-    featured: false,
-  },
-  {
-    title: "Blog Platform",
-    description: "A full-stack blog platform with user authentication and CRUD functionality",
-    image: Project5,
-    tags: [
-      {
-        name: "JavaScript",
-        class: "JavaScriptTag",
-        icon: JavaScriptIcon,
-      },
-      {
-        name: "React",
-        class: "ReactTag",
-        icon: ReactIcon,
-      },
-      {
-        name: "Redux",
-        class: "ReduxTag",
-        icon: ReduxIcon,
-      },
-    ],
-    hasDemo: true,
-    hasSource: true,
-    featured: true,
-  },
-]);
+    ]);
+    
 
 
       const [filteredProjects, setFilteredProjects] = useState(projects)
   return (
-    <div className='projectBackground min-h-lvh'>
+    <div className='projectBackground h-max px-6 lg:px-16'>
         <div className='flex flex-col justify-center items-center pt-12 gap-3 p-4'>
             <h1 className='h1 text-transparent bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl md:text-4xl lg:text-4xl '>My Projects</h1>
             <p className='descriptiveText text-sm md:text-base max-w-lg text-center '>
@@ -187,14 +203,14 @@ const [projects, setProjects] = useState([
         <div>
           <FiltersProject projects={projects} setProjects={setProjects} filteredProjects={filteredProjects} setFilteredProjects={setFilteredProjects} />
         </div>
-        <div className='flex flex-wrap gap-4 items-stretch  px-7  justify-center mt-10'>
+        <div className='flex flex-wrap gap-4 items-stretch   justify-center mt-10 pb-10'>
             
 
             
             {filteredProjects.map((project: any) => {
                 
                 
-                return <ProjectCard title={project.title} key ={project.title} description={project.description} image={project.image} tags={project.tags} demo={project.hasDemo} source={project.hasSource}/>
+                return <ProjectCard title={project.title} key ={project.title} description={project.description} image={project.image} tags={project.tags} demo={project.demoLink} source={project.sourceLink}/>
                     
             })}
             
