@@ -51,7 +51,7 @@ const About = () => {
 
 
     return (
-        <div className='flex flex-col gap-4 card  '>
+        <div className='flex flex-col gap-4 card '>
 
         <div className='flex gap-4 items-center'>
 
@@ -108,14 +108,14 @@ const About = () => {
 
             
         </div>
-        <div className='flex gap-1 justify-center items-center w-full'>
-        <Button size={'lg'} className='font-semibold text-[1rem] w-full rounded-lg' onClick={() => {
+        <div className='flex gap-1 justify-center items-center w-full '>
+        <Button  className='font-semibold text-[1rem] w-full  rounded-lg py-5 ' onClick={() => {
                 window.location.href = emailLink
             }} >
                 <img src={EnvelopeIcon} alt="" className='w-4 h-4'/>
                 Get in touch</Button>
             
-                <Button size={'lg'} variant={"secondary"} className='font-semibold text-[1rem] w-full rounded-lg' onClick={() => {
+                <Button  variant={"secondary"} className='font-semibold text-[1rem]  rounded-lg w-full py-5 ' onClick={() => {
                 window.open(githubLink, "_blank")
             }} >
                 <img src={GithubLogo} alt="" className='w-5 h-5'/>

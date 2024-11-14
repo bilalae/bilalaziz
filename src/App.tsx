@@ -15,11 +15,11 @@ function App() {
      
       <Routes>
         <Route path='/' element={
-          <div>
+          <div className='flex flex-wrap justify-center'>
             <About />
-            <Skills />
             <Services />
             <Projects />
+            <Skills />                 
             <Contact />
           </div>
         } />
