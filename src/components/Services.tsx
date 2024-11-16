@@ -5,7 +5,7 @@ const Services = () => {
   return (
     
     
-      <div className="flex gap-4 flex-col flex-wrap w-100 text-lg card overflow-x-hidden shadow-inner">
+      <div className="flex gap-4 flex-col flex-wrap w-100 text-lg card overflow-x-hidden shadow-inner h-fit">
         <div>
         <div className="flex gap-3 cardHeading ">
           <img src={ServicesIcon} alt="" className="w-8 h-8" />

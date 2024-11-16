@@ -14,9 +14,10 @@ const Projects = () => {
 
   const handleClick = () => {
     navigate("/projects")
+    window.scrollTo(0,0);
   }
   return (
-    <div className="card overflow-hidden ">
+    <div className="card overflow-hidden h-fit ">
       <div className="flex flex-col gap-3">
       <div className="flex gap-2 ">
         <img src={ProjectsIcon} alt="" className="w-8 h-8" />
