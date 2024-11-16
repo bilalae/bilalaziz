@@ -54,7 +54,7 @@ const Skills = () => {
   return (
 
  
-   <div className="card h-fit">
+   <div className="card h-fit w-full min-w-[90%] max-w-[90%]  lg:min-w-full ">
         <div>
         <div className="flex gap-3 cardHeading ">
        

@@ -31,7 +31,7 @@ const workProcessSteps = [
 ]
 const WorkProcess = () => {
   return (
-    <div className="card">
+    <div className="card w-full min-w-[90%] max-w-[90%] lg:min-w-full">
        <div>
         <div className="flex gap-3 cardHeading   ">
        

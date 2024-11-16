@@ -5,7 +5,7 @@ const Services = () => {
   return (
     
     
-      <div className="flex gap-4 flex-col flex-wrap w-100 text-lg card overflow-x-hidden shadow-inner h-fit">
+      <div className="card overflow-hidden  h-fit w-full max-w-[90%] lg:min-w-full">
         <div>
         <div className="flex gap-3 cardHeading ">
           <img src={ServicesIcon} alt="" className="w-8 h-8" />
@@ -17,13 +17,13 @@ const Services = () => {
         </div>
 
     {/* Animated Scrolling Tags */}
-<div className="w-full overflow-hidden">
+<div className=" overflow-hidden">
       {/* Normal */}
-      <div className="relative rounded-lg">
+      <div className="relative rounded-lg  ">
         <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-card to-transparent z-10"></div>
-      <div className="font-semibold text-highlight scrollAnimation ">
+      <div className="font-semibold text-highlight scrollAnimation     ">
       {technologies.map((item: string) => {
-        return <p key={item} className="bg-background px-3 py-2 rounded-lg ">{item}</p>
+        return <div key={item} className="bg-background px-3 py-2 rounded-lg ">{item}</div>
       })}
        
       </div>
@@ -34,7 +34,7 @@ const Services = () => {
       {/* Reversed */}
       <div className="relative w-full  overflow-hidden rounded-lg">
         <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-card to-transparent z-10"></div>
-      <div className="font-semibold text-highlight scrollAnimation ">
+      <div className="font-semibold text-highlight scrollAnimation  ">
       {technologies.reverse().map((item: string) => {
         return <p key={item} className="bg-background px-3 py-2 rounded-lg ">{item}</p>
       })}

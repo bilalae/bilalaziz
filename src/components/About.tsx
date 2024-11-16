@@ -51,7 +51,7 @@ const About = () => {
 
 
     return (
-        <div className='flex flex-col gap-4 card h-fit w-fit'>
+        <div className='flex flex-col gap-4 card h-fit w-full max-w-[90%]  lg:min-w-full'>
 
         <div className='flex gap-4 items-center'>
 

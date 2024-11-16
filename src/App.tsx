@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 import About from "./components/About";
+import ExtraTags from './components/ExtraTags';
 
 
 function App() {
@@ -16,17 +17,17 @@ function App() {
      
       <Routes>
         <Route path='/' element={
-          <div className='md:grid md:grid-cols-2 xl:grid-cols-3'>
+          <div className='md:grid max-w-[65vh] m-auto  lg:max-w-full md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-2'>
          <div className=''>
          <About />
-
          <Services />
+       <Projects />
 
          </div>
          <div className=''>
 
          <Skills />
-       <Projects />
+          <ExtraTags />
          </div>
          <div className=''>
 
