@@ -15,7 +15,7 @@ const About = () => {
     const [text] = useState("Developer");
     const [scrambledText, setScrambledText] = useState("");
     let interval: any= null;
-    const emailLink = `mailto:${"bilalxeo@gmail.com"}?subject=${encodeURIComponent("Hello there!")}&body=${encodeURIComponent("Hook me up with some weed??")}`;
+    const emailLink = `mailto:${"bilalxeo@gmail.com"}?subject=${encodeURIComponent("Excited to Collaborate")}&body=${encodeURIComponent("Hi Bilal,")}`;
     const githubLink =  "https://github.com/bilalae"
     const scrobbleAnimation = (text: string) => {
         clearInterval(interval);

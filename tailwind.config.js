@@ -8,6 +8,7 @@ export default {
 		animation: {
 			scrollLeft: 'scrollLeft 30s linear infinite alternate',
 			scrollRight: 'scrollRight 30s linear infinite alternate',
+			typing: "typing 7s steps(40,end) forwards, blink .7s infinite",
 		},
 		transitionDuration: {
 			'10s': '10000ms', 
@@ -20,7 +21,24 @@ export default {
 			scrollRight: {
 				'0%': { transform: 'translateX(0%)' },
 				'100%': { transform: 'translateX(50%)' },
-			}
+			},
+			typing: {
+				"0%": {
+				  width: "0%",
+				  
+				},
+				"100%": {
+				  width: "100%"
+				}
+			  },
+			  blink: {
+				"50%": {
+				  borderColor: "transparent"
+				},
+				"100%": {
+				  borderColor: "primary"
+				}
+			  },
 		},
 		fontFamily: {
 			geistSans: ['Geist Sans', 'sans-serif'],

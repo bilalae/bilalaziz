@@ -60,7 +60,7 @@
   }
 
   .card {
-    @apply p-7 mx-8 my-2 md:m-2  bg-card  border-2 rounded-xl border-border  flex flex-col gap-4 h-fit 
+    @apply p-7 ml-6 my-2 md:m-2  bg-card  border-2 rounded-xl border-border  flex flex-col gap-4 h-fit 
   }
 
   .cardHeading {
